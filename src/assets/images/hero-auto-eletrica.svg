@@ -1,0 +1,20 @@
+<svg width="720" height="520" viewBox="0 0 720 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustração de carro com sistema elétrico</title>
+  <desc id="desc">Carro moderno com traços amarelos simulando energia elétrica automotiva.</desc>
+  <rect width="720" height="520" rx="36" fill="#101826"/>
+  <circle cx="568" cy="112" r="92" fill="#38BDF8" fill-opacity=".16"/>
+  <circle cx="156" cy="400" r="128" fill="#FACC15" fill-opacity=".12"/>
+  <path d="M151 306c24-69 65-108 124-116l133-18c51-7 98 18 121 64l31 62h30c30 0 55 24 55 55v31H80v-22c0-31 20-58 49-67l22-7Z" fill="#E5E7EB"/>
+  <path d="M198 289c18-41 50-65 94-70l108-13c31-4 61 11 76 38l24 45H198Z" fill="#0F172A"/>
+  <path d="M217 279c16-25 39-39 70-43l105-12c24-3 46 8 59 28l17 27H217Z" fill="#38BDF8" fill-opacity=".34"/>
+  <path d="M116 386h494v34H116v-34Z" fill="#FACC15"/>
+  <circle cx="214" cy="414" r="52" fill="#070B12"/>
+  <circle cx="214" cy="414" r="25" fill="#94A3B8"/>
+  <circle cx="514" cy="414" r="52" fill="#070B12"/>
+  <circle cx="514" cy="414" r="25" fill="#94A3B8"/>
+  <path d="M131 317h71l-22 42h-91c5-21 20-37 42-42Z" fill="#EF4444"/>
+  <path d="M543 318h60c19 0 35 16 35 35v6h-74l-21-41Z" fill="#FACC15"/>
+  <path d="M392 95 339 198h67l-39 92 117-128h-70l43-67h-65Z" fill="#FACC15"/>
+  <path d="M305 133h-84m72 46h-58m270 152h55" stroke="#FACC15" stroke-width="10" stroke-linecap="round"/>
+  <path d="M554 177h-37m67 40h-72" stroke="#38BDF8" stroke-width="8" stroke-linecap="round"/>
+</svg>

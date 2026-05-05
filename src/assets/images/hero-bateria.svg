@@ -1,0 +1,17 @@
+<svg width="760" height="520" viewBox="0 0 760 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Bateria automotiva</title>
+  <desc id="desc">Ilustração técnica de uma bateria automotiva com terminal vermelho.</desc>
+  <rect width="760" height="520" rx="28" fill="#F8F8F8"/>
+  <path d="M422 54h274c22 0 40 18 40 40v286c0 22-18 40-40 40H422c-22 0-40-18-40-40V94c0-22 18-40 40-40Z" fill="#E6E6E6"/>
+  <path d="M445 91h227c12 0 22 10 22 22v238c0 12-10 22-22 22H445c-12 0-22-10-22-22V113c0-12 10-22 22-22Z" fill="#FAFAFA"/>
+  <path d="M448 121h224v56H448v-56Z" fill="#1E1E1E"/>
+  <path d="M448 198h224v125H448V198Z" fill="#ECECEC"/>
+  <path d="M474 218h72v28h-72v-28Zm0 48h160v14H474v-14Zm0 28h132v14H474v-14Z" fill="#9CA3AF"/>
+  <path d="M626 87h58c9 0 16 7 16 16v48h-90v-48c0-9 7-16 16-16Z" fill="#D90000"/>
+  <path d="M634 109h43m-22-21v42" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <path d="M372 118c-67 22-120 67-154 132-42 80-111 116-184 121" stroke="#111111" stroke-opacity=".12" stroke-width="32" stroke-linecap="round"/>
+  <path d="M377 174c-48 22-84 59-108 111-31 67-77 104-138 114" stroke="#111111" stroke-opacity=".1" stroke-width="20" stroke-linecap="round"/>
+  <path d="M382 233c-36 20-62 50-78 88-20 47-55 78-104 91" stroke="#111111" stroke-opacity=".08" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="112" cy="120" r="66" fill="#FFE100"/>
+  <path d="M77 131h58l-15 22H55l22-22Zm19-50h23l-35 44H61l35-44Zm27 22h20l26 50h-23l-7-15h-34l-12 15H70l53-50Zm-5 17h15l-5-11-10 11Z" fill="#D90000"/>
+</svg>
