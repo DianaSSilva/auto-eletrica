@@ -8,7 +8,18 @@
   max-width: 650px;
   margin: 0 auto;
   text-align: center;
-  
+}
+
+.eyebrow,
+.title {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: servicesTextReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: opacity, transform;
+}
+
+.title {
+  animation-delay: 0.18s;
 }
 
 .cards {
@@ -29,6 +40,10 @@
     border-color 180ms ease,
     transform 180ms ease,
     background 180ms ease;
+  opacity: 0;
+  translate: 0 26px;
+  animation: serviceCardReveal 0.72s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: opacity, translate;
 }
 
 .card:hover {
@@ -58,6 +73,30 @@
   margin: 0.5rem 0 0;
   color: var(--color-muted);
   font-size: 0.86rem;
+}
+
+@keyframes servicesTextReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes serviceCardReveal {
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eyebrow,
+  .title,
+  .card {
+    opacity: 1;
+    translate: none;
+    animation: none;
+  }
 }
 
 @media (min-width: 680px) {

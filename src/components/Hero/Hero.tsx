@@ -1,22 +1,36 @@
-import partsImage from '../../assets/images/automotiva.png';
+import { useReplayAnimationOnView } from '../../hooks/useReplayAnimationOnView';
+import laraLogo from '../../assets/images/lara-logo.png';
 import styles from './Hero.module.css';
 
-export function Hero() {
+type HeroProps = {
+  replayKey?: number;
+};
+
+export function Hero({ replayKey = 0 }: HeroProps) {
+  const { animationKey, sectionRef } = useReplayAnimationOnView<HTMLElement>(replayKey);
+
   return (
-    <section id="inicio" className={styles.hero}>
-      <div className={`container ${styles.grid}`}>
-        <div className={styles.content}>
-          <h2 className="section-label">Desde 1990</h2>
-          <h1 className="section-title">Elétrica automotiva com tradição em Diamantina</h1>
-          <p>
-            Peças, componentes e atendimento especializado para manter seu veículo funcionando com
-            segurança.
-          </p>
+    <section id="inicio" className={styles.hero} ref={sectionRef}>
+      <span key={`background-${animationKey}`} className={styles.background} aria-hidden="true" />
+      <div key={animationKey} className={styles.grid}>
+        <div className={styles.lead}>
+          <div className={styles.bannerLogo}>
+            <img src={laraLogo} alt="Logo da Auto Elétrica Lara" />
+          </div>
+
+          <div className={styles.content}>
+            <h1 className={`section-title ${styles.title}`}>
+              <span className={styles.since}>Desde 1990</span>{' '}
+              <span className={styles.reference}>sendo referência em Diamantina.</span>
+            </h1>
+            <p className={styles.description}>
+              Peças, componentes e atendimento especializado para manter seu veículo funcionando com
+              segurança.
+            </p>
+          </div>
         </div>
 
-        <figure className={styles.imageCard}>
-          <img src={partsImage} alt="Peças elétricas automotivas" />
-        </figure>
+        <span className={styles.visualSpace} aria-hidden="true" />
       </div>
     </section>
   );

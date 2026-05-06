@@ -29,6 +29,63 @@
   color: #d4ad2d;
 }
 
+.icon,
+.item h2,
+.itemText {
+  opacity: 0;
+  translate: -24px 0;
+  animation: contactItemReveal 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: opacity, translate;
+}
+
+.item:nth-child(1) .icon {
+  animation-delay: 0s;
+}
+
+.item:nth-child(2) .icon {
+  animation-delay: 0.12s;
+}
+
+.item:nth-child(3) .icon {
+  animation-delay: 0.24s;
+}
+
+.item:nth-child(4) .icon {
+  animation-delay: 0.36s;
+}
+
+.item:nth-child(1) h2 {
+  animation-delay: 0.58s;
+}
+
+.item:nth-child(2) h2 {
+  animation-delay: 0.7s;
+}
+
+.item:nth-child(3) h2 {
+  animation-delay: 0.82s;
+}
+
+.item:nth-child(4) h2 {
+  animation-delay: 0.94s;
+}
+
+.item:nth-child(1) .itemText {
+  animation-delay: 1.16s;
+}
+
+.item:nth-child(2) .itemText {
+  animation-delay: 1.28s;
+}
+
+.item:nth-child(3) .itemText {
+  animation-delay: 1.4s;
+}
+
+.item:nth-child(4) .itemText {
+  animation-delay: 1.52s;
+}
+
 .icon svg {
   width: 100%;
   height: 100%;
@@ -73,6 +130,23 @@
   padding: 0;
   list-style: none;
   text-align: center;
+}
+
+@keyframes contactItemReveal {
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon,
+  .item h2,
+  .itemText {
+    opacity: 1;
+    translate: none;
+    animation: none;
+  }
 }
 
 @media (min-width: 760px) {

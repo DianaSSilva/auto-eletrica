@@ -1,11 +1,14 @@
 import { useState } from 'react';
-import laraLogo from '../../assets/images/lara-logo.png';
 import { contactInfo, navItems } from '../../utils/siteData';
 import { useSmoothScroll } from '../../hooks/useSmoothScroll';
 import { createWhatsappLink } from '../../utils/whatsapp';
 import styles from './Header.module.css';
 
-export function Header() {
+type HeaderProps = {
+  onNavigate?: (href: string) => void;
+};
+
+export function Header({ onNavigate }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeHref, setActiveHref] = useState('#inicio');
   const scrollTo = useSmoothScroll();
@@ -14,14 +17,15 @@ export function Header() {
   const handleNavClick = (href: string) => {
     setActiveHref(href);
     scrollTo(href);
+    onNavigate?.(href);
     setIsOpen(false);
   };
 
   return (
     <header className={styles.header}>
       <div className={`container ${styles.wrapper}`}>
-        <a className={styles.logo} href="#inicio" onClick={() => handleNavClick('#inicio')}>
-          <img className={styles.logoIcon} src={laraLogo} alt="Logo da Auto Elétrica Lara" />
+        <a className={styles.brand} href="#inicio" onClick={() => handleNavClick('#inicio')}>
+          <span>Auto Elétrica Lara</span>
         </a>
 
         <button

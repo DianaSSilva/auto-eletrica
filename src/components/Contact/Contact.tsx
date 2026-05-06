@@ -1,13 +1,19 @@
+import { useReplayAnimationOnView } from '../../hooks/useReplayAnimationOnView';
 import { contactInfo, socialLinks } from '../../utils/siteData';
 import { createWhatsappLink } from '../../utils/whatsapp';
 import styles from './Contact.module.css';
 
-export function Contact() {
+type ContactProps = {
+  replayKey?: number;
+};
+
+export function Contact({ replayKey = 0 }: ContactProps) {
+  const { animationKey, sectionRef } = useReplayAnimationOnView<HTMLElement>(replayKey);
   const whatsappLink = createWhatsappLink(contactInfo.whatsapp, contactInfo.whatsappMessage);
 
   return (
-    <section id="contato" className={styles.contact}>
-      <div className={`container ${styles.wrapper}`}>
+    <section id="contato" className={styles.contact} ref={sectionRef}>
+      <div key={animationKey} className={`container ${styles.wrapper}`}>
         <article className={styles.item}>
           <div className={styles.icon} aria-hidden="true">
             <svg viewBox="0 0 24 24">
@@ -16,7 +22,9 @@ export function Contact() {
             </svg>
           </div>
           <h2>Endereço</h2>
-          <address>{contactInfo.address}</address>
+          <div className={styles.itemText}>
+            <address>{contactInfo.address}</address>
+          </div>
         </article>
 
         <article className={styles.item}>
@@ -27,10 +35,12 @@ export function Contact() {
             </svg>
           </div>
           <h2>Telefones</h2>
-          <a href={`tel:${contactInfo.phone.replace(/\D/g, '')}`}>{contactInfo.phone}</a>
-          <a href={whatsappLink} target="_blank" rel="noreferrer">
-            WhatsApp: {contactInfo.phone}
-          </a>
+          <div className={styles.itemText}>
+            <a href={`tel:${contactInfo.phone.replace(/\D/g, '')}`}>{contactInfo.phone}</a>
+            <a href={whatsappLink} target="_blank" rel="noreferrer">
+              WhatsApp: {contactInfo.phone}
+            </a>
+          </div>
         </article>
 
         <article className={styles.item}>
@@ -41,11 +51,13 @@ export function Contact() {
             </svg>
           </div>
           <h2>Atendimento</h2>
-          <ul>
-            {contactInfo.businessHours.map((hour) => (
-              <li key={hour}>{hour}</li>
-            ))}
-          </ul>
+          <div className={styles.itemText}>
+            <ul>
+              {contactInfo.businessHours.map((hour) => (
+                <li key={hour}>{hour}</li>
+              ))}
+            </ul>
+          </div>
         </article>
 
         <article className={styles.item}>
@@ -57,11 +69,13 @@ export function Contact() {
             </svg>
           </div>
           <h2>Redes sociais</h2>
-          {socialLinks.map((link) => (
-            <a key={link.href} href={link.href} target="_blank" rel="noreferrer">
-              {link.label}
-            </a>
-          ))}
+          <div className={styles.itemText}>
+            {socialLinks.map((link) => (
+              <a key={link.href} href={link.href} target="_blank" rel="noreferrer">
+                {link.label}
+              </a>
+            ))}
+          </div>
         </article>
       </div>
     </section>
