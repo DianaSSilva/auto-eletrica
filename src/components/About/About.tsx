@@ -4,8 +4,8 @@ import autoEletricaImage from '../../assets/images/autoEletrica.png';
 import styles from './About.module.css';
 
 const metrics = [
-  { value: '1990', label: 'ano em que a história começou' },
-  { value: 'Diamantina', label: 'cidade que faz parte dessa trajetória.' },
+  { value: '1990', label: 'Ano em que a história começou.' },
+  { value: 'Diamantina', label: 'Cidade que faz parte dessa trajetória.' },
 ];
 
 type AboutProps = {

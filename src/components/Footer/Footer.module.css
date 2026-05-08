@@ -6,8 +6,9 @@
 }
 
 .copy {
-  color: #4b5563;
-  font-size: 0.9rem;
-  font-weight: 700;
+  color: var(--color-prose);
+  font-size: var(--font-size-meta);
+  font-weight: var(--font-weight-prose);
+  line-height: var(--line-height-prose);
   text-align: center;
 }

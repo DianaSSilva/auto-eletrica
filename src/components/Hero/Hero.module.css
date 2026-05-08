@@ -4,7 +4,7 @@
   min-height: clamp(320px, 38vw, 420px);
   padding: 1.85rem 0 2rem;
   background:
-    linear-gradient(90deg, rgba(10, 0, 0, 0.78) 0%, rgba(35, 0, 0, 0.52) 45%, rgba(0, 0, 0, 0.26) 100%),
+    linear-gradient(90deg, rgba(10, 0, 0, 0.88) 0%, rgba(35, 0, 0, 0.62) 45%, rgba(0, 0, 0, 0.38) 100%),
     radial-gradient(circle at 85% 20%, rgba(217, 0, 0, 0.16), transparent 20rem);
   isolation: isolate;
 }
@@ -24,7 +24,15 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(70, 0, 0, 0.26));
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.48) 40%,
+      rgba(0, 0, 0, 0.2) 68%,
+      transparent 100%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.28), rgba(25, 0, 0, 0.42));
   content: "";
 }
 

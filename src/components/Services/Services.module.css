@@ -66,13 +66,17 @@
 .card h3 {
   margin: 0.85rem 0 0;
   color: var(--color-text);
-  font-size: 0.96rem;
+  font-size: var(--font-size-card-title);
+  font-weight: var(--font-weight-card-title);
+  line-height: 1.35;
 }
 
 .card p {
   margin: 0.5rem 0 0;
-  color: var(--color-muted);
-  font-size: 0.86rem;
+  color: var(--color-prose);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-prose);
+  line-height: var(--line-height-prose);
 }
 
 @keyframes servicesTextReveal {
